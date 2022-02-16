@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5EBA2D5127BD99EE002C81CB /* ColorHexCodesListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5027BD99EE002C81CB /* ColorHexCodesListApp.swift */; };
-		5EBA2D5327BD99EE002C81CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5227BD99EE002C81CB /* ContentView.swift */; };
+		5EBA2D5327BD99EE002C81CB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5227BD99EE002C81CB /* MainView.swift */; };
 		5EBA2D5527BD99EF002C81CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5427BD99EF002C81CB /* Assets.xcassets */; };
 		5EBA2D5827BD99EF002C81CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5727BD99EF002C81CB /* Preview Assets.xcassets */; };
+		5EBA2D5F27BD9A1D002C81CB /* colors.json in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5E27BD9A1D002C81CB /* colors.json */; };
+		5EBA2D6527BD9BC2002C81CB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D6427BD9BC2002C81CB /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EBA2D4D27BD99EE002C81CB /* ColorHexCodesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorHexCodesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EBA2D5027BD99EE002C81CB /* ColorHexCodesListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexCodesListApp.swift; sourceTree = "<group>"; };
-		5EBA2D5227BD99EE002C81CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5EBA2D5227BD99EE002C81CB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5EBA2D5427BD99EF002C81CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EBA2D5727BD99EF002C81CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5EBA2D5E27BD9A1D002C81CB /* colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		5EBA2D6427BD9BC2002C81CB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 		5EBA2D4427BD99EE002C81CB = {
 			isa = PBXGroup;
 			children = (
+				5EBA2D5E27BD9A1D002C81CB /* colors.json */,
 				5EBA2D4F27BD99EE002C81CB /* ColorHexCodesList */,
 				5EBA2D4E27BD99EE002C81CB /* Products */,
 			);
@@ -51,8 +56,11 @@
 		5EBA2D4F27BD99EE002C81CB /* ColorHexCodesList */ = {
 			isa = PBXGroup;
 			children = (
+				5EBA2D6327BD9B48002C81CB /* Service */,
+				5EBA2D6227BD9B3B002C81CB /* ViewModel */,
+				5EBA2D6127BD9B2A002C81CB /* View */,
+				5EBA2D6027BD9B23002C81CB /* Model */,
 				5EBA2D5027BD99EE002C81CB /* ColorHexCodesListApp.swift */,
-				5EBA2D5227BD99EE002C81CB /* ContentView.swift */,
 				5EBA2D5427BD99EF002C81CB /* Assets.xcassets */,
 				5EBA2D5627BD99EF002C81CB /* Preview Content */,
 			);
@@ -65,6 +73,36 @@
 				5EBA2D5727BD99EF002C81CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5EBA2D6027BD9B23002C81CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA2D6427BD9BC2002C81CB /* Color.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EBA2D6127BD9B2A002C81CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EBA2D5227BD99EE002C81CB /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EBA2D6227BD9B3B002C81CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5EBA2D6327BD9B48002C81CB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EBA2D5327BD99EE002C81CB /* ContentView.swift in Sources */,
+				5EBA2D5327BD99EE002C81CB /* MainView.swift in Sources */,
+				5EBA2D6527BD9BC2002C81CB /* Color.swift in Sources */,
+				5EBA2D5F27BD9A1D002C81CB /* colors.json in Sources */,
 				5EBA2D5127BD99EE002C81CB /* ColorHexCodesListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
