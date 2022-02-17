@@ -13,6 +13,7 @@
 		5EBA2D5827BD99EF002C81CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5727BD99EF002C81CB /* Preview Assets.xcassets */; };
 		5EBA2D5F27BD9A1D002C81CB /* colors.json in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D5E27BD9A1D002C81CB /* colors.json */; };
 		5EBA2D6527BD9BC2002C81CB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D6427BD9BC2002C81CB /* Color.swift */; };
+		5EBA2D6727BE4F9D002C81CB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA2D6627BE4F9D002C81CB /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		5EBA2D5727BD99EF002C81CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EBA2D5E27BD9A1D002C81CB /* colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		5EBA2D6427BD9BC2002C81CB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5EBA2D6627BE4F9D002C81CB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		5EBA2D6327BD9B48002C81CB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				5EBA2D6627BE4F9D002C81CB /* WebService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				5EBA2D5327BD99EE002C81CB /* MainView.swift in Sources */,
 				5EBA2D6527BD9BC2002C81CB /* Color.swift in Sources */,
 				5EBA2D5F27BD9A1D002C81CB /* colors.json in Sources */,
+				5EBA2D6727BE4F9D002C81CB /* WebService.swift in Sources */,
 				5EBA2D5127BD99EE002C81CB /* ColorHexCodesListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
