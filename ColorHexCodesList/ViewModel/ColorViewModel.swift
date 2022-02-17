@@ -40,6 +40,19 @@ class ColorListViewModel : ObservableObject {
             }
         }
     }
+    
+    // third solution
+    // second solution convert to async
+    func downloadColorsContinuation(url : URL) async {
+        do {
+            let colors = try await webService.downloadColorsContinuation(url: url)
+            DispatchQueue.main.async {
+                self.colorList = colors.map(ColorViewModel.init)
+            }
+        } catch {
+            print("error in here")
+        }
+    }
 }
 
 struct ColorViewModel {

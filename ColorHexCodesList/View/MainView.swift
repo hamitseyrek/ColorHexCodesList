@@ -30,10 +30,12 @@ struct MainView: View {
             }.navigationTitle("Color List")
                 .font(.title3)
         }
+        /*
         // first solution
         .task {
             await colorListViewModel.downloadAsyncColors(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
         }
+         */
         
         /*
          // second solution
@@ -41,6 +43,12 @@ struct MainView: View {
             colorListViewModel.downloadColors(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
         }
          */
+        
+        
+        // first solution
+        .task {
+            await colorListViewModel.downloadColorsContinuation(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
+        }
     }
 }
 

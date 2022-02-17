@@ -44,4 +44,19 @@ class WebService {
             
         }.resume()
     }
+    
+    // third solution
+    // second solution convert to async
+    func downloadColorsContinuation(url : URL) async throws -> [Color] {
+        try await withCheckedThrowingContinuation { continuation in
+            downloadColors(url: url) { result in
+                switch result {
+                case .success(let colors) :
+                    continuation.resume(returning: colors ?? [])
+                case .failure(let error) :
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
 }
