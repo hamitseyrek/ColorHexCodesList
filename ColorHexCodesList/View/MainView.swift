@@ -27,7 +27,17 @@ struct MainView: View {
                         .foregroundColor(.green)
                         .frame(maxWidth:.infinity, alignment: .leading)
                 }
-            }.navigationTitle("Color List")
+            }.toolbar(content: {
+                Button {
+                    Task.init {
+                        await colorListViewModel.downloadAsyncColors(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
+                    }
+                } label: {
+                    Text("Refresh")
+                }
+
+            })
+            .navigationTitle("Color List")
                 .font(.title3)
         }
         /*
@@ -43,7 +53,6 @@ struct MainView: View {
             colorListViewModel.downloadColors(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
         }
          */
-        
         
         // first solution
         .task {
