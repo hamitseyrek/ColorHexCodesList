@@ -24,8 +24,8 @@ class WebService {
             guard let data = data, error == nil else {
                 return completion(.failure(.noData))
             }
-            
-            guard let colors = try? JSONDecoder().decode([Color].self, from: data) else {
+            print(data)
+            guard let colors = try? JSONDecoder().decode([Color]?.self, from: data) else {
                 return completion(.failure(.parseError))
             }
             

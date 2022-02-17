@@ -8,9 +8,30 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var colorListViewModel : ColorListViewModel
+    
+    init() {
+        self.colorListViewModel = ColorListViewModel()
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(colorListViewModel.colorList, id: \.id) { color in
+                VStack {
+                    Text(color.name)
+                        .font(.title3)
+                        .frame(maxWidth:.infinity, alignment: .leading)
+                    Text(color.hexCode)
+                        .font(.body)
+                        .foregroundColor(.green)
+                        .frame(maxWidth:.infinity, alignment: .leading)
+                }
+            }.navigationTitle("Color List")
+                .font(.title3)
+        }.onAppear {
+            colorListViewModel.downloadColors(url: URL(string: "https://raw.githubusercontent.com/hamitseyrek/ColorHexCodesList/hamitseyrek/colors.json")!)
+        }
     }
 }
 

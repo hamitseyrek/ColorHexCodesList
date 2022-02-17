@@ -12,8 +12,8 @@ struct Color : Decodable, Identifiable {
     let name : String
     let hexCode : String
     
-    private enum XodingKeys : String, CodingKey {
+    private enum CodingKeys : String, CodingKey {
         case name  = "name"
-        case code = "hex"
+        case hexCode = "hex"
     }
 }
